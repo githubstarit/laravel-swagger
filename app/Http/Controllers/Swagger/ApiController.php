@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Swagger;
 
-use Illuminate\Http\Request;
+
 use App\Http\Controllers\Controller;
 use Swagger\Annotations as SWG;
 
@@ -31,7 +31,6 @@ class ApiController extends Controller
     {
         // swagger 扫描 指定路径
         $swagger = \Swagger\scan(app_path('Http/Controllers/'));
-
         return response()->json($swagger, 200);
     }
 
